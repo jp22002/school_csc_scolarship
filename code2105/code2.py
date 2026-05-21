@@ -5,10 +5,9 @@ def run_length_encode(data):
             dicti[i] += 1
         else:
             dicti[i] = 1
-    final = "("
+    final = ()
     for i in dicti:
-        final += '(' + str(i) + ',' + str(dicti[i]) + ')'
-    final += ')'
+        final += ((i, dicti[i]),)
     return(final)
 
 data = [10,20,30,30,30,20]
